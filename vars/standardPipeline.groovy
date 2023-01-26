@@ -15,7 +15,7 @@ def call(body) {
             stage('Compile/Test') {
                 when {                
                 expression {
-                    BRANCH_NAME = '5'
+                    BRANCH_NAME == '5'
                 }
                 steps {
                     withMaven(maven: 'Maven 3.3.9') {
