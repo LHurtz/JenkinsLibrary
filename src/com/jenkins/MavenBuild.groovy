@@ -8,6 +8,7 @@ public class MavenBuild {
         steps.withMaven(maven: 'linux_M3') {
             steps.echo "CallCounter: " + CallCounter.count()
             steps.sh 'mvn clean install'
+            echo 'test'
         }
     }
 }
