@@ -13,6 +13,10 @@ def call(body) {
 
         stages {
             stage('Compile/Test') {
+                when {                
+                expression {
+                    BRANCH_NAME = '5'
+                }
                 steps {
                     withMaven(maven: 'Maven 3.3.9') {
                         echo "mvn clean install"
